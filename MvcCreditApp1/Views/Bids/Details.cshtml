@@ -1,0 +1,43 @@
+﻿@model MvcCreditApp1.Models.Bid
+
+@{
+    ViewBag.Title = "Изменить";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Изменить</h2>
+
+<div>
+    <h4>Bid</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditHead)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditHead)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bidDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bidDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Изменить", "Edit", new { id = Model.BidId }) |
+    @Html.ActionLink("Вернуться в список", "Index")
+</p>
